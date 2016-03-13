@@ -10,7 +10,7 @@ describe( 'AMQP2Influx-Winston integration', function() {
   winston.loggers.add( 'worker', {
     transports: [
       new AmqpWinston({
-        name: 'worker', level: 'silly', host: process.env.AMQP_URL, exchange: 'log', routingKey: 'logRoutingKey'
+        name: 'worker', level: 'silly', host: process.env.AMQP_URL, exchange: 'logs', exchangeOptions: { type: 'fanout', durable: false }, routingKey: 'logRoutingKey'
       })
     ]
   })
