@@ -7,6 +7,8 @@ describe( 'AMQP2Influx-Winston integration', function() {
 
   var AmqpWinston = require( 'amqp-winston' )
 
+  console.log( '*** ENV', process.env )
+
   winston.loggers.add( 'worker', {
     transports: [
       new AmqpWinston({
