@@ -1,6 +1,3 @@
-var chai = require( 'chai' )
-chai.should()
-
 describe( 'AMQP2Influx object', function() {
 
   var AMQP2Influx
