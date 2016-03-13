@@ -2,12 +2,13 @@ var amqp = require( 'amqplib' )
 
 var AMQP2Influx = function() {
 
-  var self = this
+  var amqp2influx = this
+
   amqp.connect( process.env.AMQP_URL ).then( function( connection ) {
     connection.createChannel().then( function( channel ) {
       var queue = channel.assertQueue( process.env.AMQP_QUEUE_NAME, { durable: true } )
       queue.then( function() {
-        channel.consume( process.env.AMQP_QUEUE_NAME, self.processMessage )
+        channel.consume( process.env.AMQP_QUEUE_NAME, amqp2influx.processMessage )
       })
     })
   })
