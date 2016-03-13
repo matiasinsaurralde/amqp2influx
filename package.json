@@ -9,6 +9,7 @@
   "author": "Matias Insaurralde <matias@insaurral.de>",
   "license": "MIT",
   "dependencies": {
+    "amqplib": "^0.4.1",
     "dotenv": "^2.0.0"
   }
 }
