@@ -6,3 +6,7 @@ amqp2influx
 ## Usage
 
 I'm planning to use this in combination with [winston](https://github.com/winstonjs/winston) and [winston-amqp](https://github.com/MailOnline/winston-amqp) transport.
+
+## License
+
+[MIT](https://github.com/matiasinsaurralde/amqp2influx/blob/master/LICENSE)
