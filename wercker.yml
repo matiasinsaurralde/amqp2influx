@@ -1,0 +1,10 @@
+box: node
+
+services:
+  - rabbitmq
+
+build:
+  steps:
+    - npm-install
+    - npm-test
+
